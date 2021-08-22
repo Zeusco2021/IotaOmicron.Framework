@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>IotaOmicron.Framework.Utilities.Middleware</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\IotaOmicron.Framework.Utilities.Common\IotaOmicron.Framework.Utilities.Common.csproj" />
+  </ItemGroup>
+
+</Project>

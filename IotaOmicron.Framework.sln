@@ -1,0 +1,73 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31424.327
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IotaOmicron.Framework.AppMgmt.Web.API", "IotaOmicron.Framework.AppMgmt.Web.API\IotaOmicron.Framework.AppMgmt.Web.API.csproj", "{CFF736D7-4845-4A29-8058-DD47421DA274}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IotaOmicron.Framework.Data.Models", "IotaOmicron.Framework.Data.Models\IotaOmicron.Framework.Data.Models.csproj", "{DC145935-622C-4551-87A7-792A1116114B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IotaOmicron.Framework.Data.Common", "IotaOmicron.Framework.Data.Common\IotaOmicron.Framework.Data.Common.csproj", "{E98B002C-CAC8-4BE1-96D0-F2610B723033}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IotaOmicron.Framework.Utilities.Azure", "IotaOmicron.Framework.Utilities.Azure\IotaOmicron.Framework.Utilities.Azure.csproj", "{8E4BF518-BFB8-4117-9569-9B1FAA8B353A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IotaOmicron.Framework.Services", "IotaOmicron.Framework.Services\IotaOmicron.Framework.Services.csproj", "{1DE3992D-6EE8-4310-A1B3-1793DE532D36}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IotaOmicron.Framework.Repositories", "IotaOmicron.Framework.Repositories\IotaOmicron.Framework.Repositories.csproj", "{79B0719B-E272-44C5-8601-3368B7C5DD10}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IotaOmicron.Framework.Validations", "IotaOmicron.Framework.Validations\IotaOmicron.Framework.Validations.csproj", "{EE104CC5-FEDC-40F7-B6F6-2B4F5A259767}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IotaOmicron.Framework.Utilities.Common", "IotaOmicron.Framework.Utilities.Common\IotaOmicron.Framework.Utilities.Common.csproj", "{71935417-37DB-45C9-B0C5-568CED9CC75D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IotaOmicron.Framework.Utilities.Middleware", "iotaOmicron,Framework.Utilities.Middleware\IotaOmicron.Framework.Utilities.Middleware.csproj", "{E63B1459-F2E2-4B15-B0FE-B65B3421E9CA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CFF736D7-4845-4A29-8058-DD47421DA274}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFF736D7-4845-4A29-8058-DD47421DA274}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFF736D7-4845-4A29-8058-DD47421DA274}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFF736D7-4845-4A29-8058-DD47421DA274}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC145935-622C-4551-87A7-792A1116114B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC145935-622C-4551-87A7-792A1116114B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC145935-622C-4551-87A7-792A1116114B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC145935-622C-4551-87A7-792A1116114B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E98B002C-CAC8-4BE1-96D0-F2610B723033}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E98B002C-CAC8-4BE1-96D0-F2610B723033}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E98B002C-CAC8-4BE1-96D0-F2610B723033}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E98B002C-CAC8-4BE1-96D0-F2610B723033}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E4BF518-BFB8-4117-9569-9B1FAA8B353A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E4BF518-BFB8-4117-9569-9B1FAA8B353A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E4BF518-BFB8-4117-9569-9B1FAA8B353A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E4BF518-BFB8-4117-9569-9B1FAA8B353A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DE3992D-6EE8-4310-A1B3-1793DE532D36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DE3992D-6EE8-4310-A1B3-1793DE532D36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DE3992D-6EE8-4310-A1B3-1793DE532D36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DE3992D-6EE8-4310-A1B3-1793DE532D36}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79B0719B-E272-44C5-8601-3368B7C5DD10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79B0719B-E272-44C5-8601-3368B7C5DD10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79B0719B-E272-44C5-8601-3368B7C5DD10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79B0719B-E272-44C5-8601-3368B7C5DD10}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE104CC5-FEDC-40F7-B6F6-2B4F5A259767}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE104CC5-FEDC-40F7-B6F6-2B4F5A259767}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE104CC5-FEDC-40F7-B6F6-2B4F5A259767}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE104CC5-FEDC-40F7-B6F6-2B4F5A259767}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71935417-37DB-45C9-B0C5-568CED9CC75D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71935417-37DB-45C9-B0C5-568CED9CC75D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71935417-37DB-45C9-B0C5-568CED9CC75D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71935417-37DB-45C9-B0C5-568CED9CC75D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E63B1459-F2E2-4B15-B0FE-B65B3421E9CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E63B1459-F2E2-4B15-B0FE-B65B3421E9CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E63B1459-F2E2-4B15-B0FE-B65B3421E9CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E63B1459-F2E2-4B15-B0FE-B65B3421E9CA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CD9CE417-CD80-4602-B5F5-8DE605196D5D}
+	EndGlobalSection
+EndGlobal

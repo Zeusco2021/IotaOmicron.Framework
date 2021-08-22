@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Identity.Web" Version="1.15.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\iotaOmicron,Framework.Utilities.Middleware\IotaOmicron.Framework.Utilities.Middleware.csproj" />
+    <ProjectReference Include="..\IotaOmicron.Framework.Data.Common\IotaOmicron.Framework.Data.Common.csproj" />
+    <ProjectReference Include="..\IotaOmicron.Framework.Data.Models\IotaOmicron.Framework.Data.Models.csproj" />
+    <ProjectReference Include="..\IotaOmicron.Framework.Repositories\IotaOmicron.Framework.Repositories.csproj" />
+    <ProjectReference Include="..\IotaOmicron.Framework.Services\IotaOmicron.Framework.Services.csproj" />
+  </ItemGroup>
+
+</Project>

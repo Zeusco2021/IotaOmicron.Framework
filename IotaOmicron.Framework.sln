@@ -19,7 +19,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IotaOmicron.Framework.Valid
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IotaOmicron.Framework.Utilities.Common", "IotaOmicron.Framework.Utilities.Common\IotaOmicron.Framework.Utilities.Common.csproj", "{71935417-37DB-45C9-B0C5-568CED9CC75D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IotaOmicron.Framework.Utilities.Middleware", "iotaOmicron,Framework.Utilities.Middleware\IotaOmicron.Framework.Utilities.Middleware.csproj", "{E63B1459-F2E2-4B15-B0FE-B65B3421E9CA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IotaOmicron.Framework.Utilities.Middleware", "iotaOmicron,Framework.Utilities.Middleware\IotaOmicron.Framework.Utilities.Middleware.csproj", "{E63B1459-F2E2-4B15-B0FE-B65B3421E9CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IotaOmicron.Framework.GobMx.Web.API", "IotaOmicron.Framework.GobMx.Web.API\IotaOmicron.Framework.GobMx.Web.API.csproj", "{1694D95F-BC7E-4F1E-9FF7-9F5A61E4A1BE}"
+	ProjectSection(ProjectDependencies) = postProject
+		{71935417-37DB-45C9-B0C5-568CED9CC75D} = {71935417-37DB-45C9-B0C5-568CED9CC75D}
+		{E98B002C-CAC8-4BE1-96D0-F2610B723033} = {E98B002C-CAC8-4BE1-96D0-F2610B723033}
+		{1DE3992D-6EE8-4310-A1B3-1793DE532D36} = {1DE3992D-6EE8-4310-A1B3-1793DE532D36}
+		{DC145935-622C-4551-87A7-792A1116114B} = {DC145935-622C-4551-87A7-792A1116114B}
+		{E63B1459-F2E2-4B15-B0FE-B65B3421E9CA} = {E63B1459-F2E2-4B15-B0FE-B65B3421E9CA}
+		{79B0719B-E272-44C5-8601-3368B7C5DD10} = {79B0719B-E272-44C5-8601-3368B7C5DD10}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +73,10 @@ Global
 		{E63B1459-F2E2-4B15-B0FE-B65B3421E9CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E63B1459-F2E2-4B15-B0FE-B65B3421E9CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E63B1459-F2E2-4B15-B0FE-B65B3421E9CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1694D95F-BC7E-4F1E-9FF7-9F5A61E4A1BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1694D95F-BC7E-4F1E-9FF7-9F5A61E4A1BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1694D95F-BC7E-4F1E-9FF7-9F5A61E4A1BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1694D95F-BC7E-4F1E-9FF7-9F5A61E4A1BE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

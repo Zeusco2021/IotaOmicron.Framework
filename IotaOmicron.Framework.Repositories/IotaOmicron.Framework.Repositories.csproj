@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
@@ -6,6 +6,17 @@
 
   <ItemGroup>
     <ProjectReference Include="..\IotaOmicron.Framework.Data.Common\IotaOmicron.Framework.Data.Common.csproj" />
+    <ProjectReference Include="..\IotaOmicron.Framework.Data.Models\IotaOmicron.Framework.Data.Models.csproj" />
+    <ProjectReference Include="..\IotaOmicron.Framework.Utilities.Common\IotaOmicron.Framework.Utilities.Common.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="External\Spotify\Classes\" />
+    <Folder Include="External\Spotify\Interfaces\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNet.WebApi.Client" Version="5.2.7" />
   </ItemGroup>
 
 </Project>

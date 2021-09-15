@@ -15,9 +15,14 @@ namespace IotaOmicron.Framework.Services.External.Banxico.Classes
             _banxicoRepository = banxicoRepository;
         }
 
-        public Task<BanxicoSeriesBmx> GetSerieById(string IdSerie)
+        public async Task<BanxicoSeriesBmx> GetSerieById(string IdSerie)
         {
-            return _banxicoRepository.GetSerieById(IdSerie);
+            return await _banxicoRepository.GetSerieById(IdSerie);
+        }
+
+        public async Task<BanxicoSeriesBmx> GetAllSeriesBancoDeMexicoSection(int bancoDeMexicoSectionNumber)
+        {
+            return await _banxicoRepository.GetAllSeriesBancoDeMexicoSection(bancoDeMexicoSectionNumber);
         }
     }
 }

@@ -42,8 +42,8 @@ namespace IotaOmicron.Framework.Repositories.External.Banxico.Classes
         public async Task<BanxicoSeriesBmx> GetAllSeriesBancoDeMexicoSection(int bancoDeMexicoSectionNumber)
         {
             string listIdSerieSectionBancoDeMexico = BanxicoSeriesCatalog.BuildBancoDeMexicoSeriesSection(bancoDeMexicoSectionNumber);
-            string workingUri = $"{_banxicoConfig.BaseUri}/{listIdSerieSectionBancoDeMexico}";
-            Dictionary<string, string> headers = new Dictionary<string, string>();
+            string workingUri                      = $"{_banxicoConfig.BaseUri}/{listIdSerieSectionBancoDeMexico}";
+            Dictionary<string, string> headers     = new Dictionary<string, string>();
             headers.Add(_banxicoConfig.ApiTokenHeader.HeaderName, _banxicoConfig.ApiTokenHeader.APIKey);
             HttpResponseMessage response = await _client.Get(workingUri, true, true, true, null, headers);
 

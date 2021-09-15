@@ -57,6 +57,34 @@ namespace IotaOmicron.Framework.GobMx.Web.API.Controllers
             {
                 return NotFound();
             }
+            try
+            {
+                var serie = await _banxicoService.GetAllSeriesBancoDeMexicoSection(bancoDeMexicoSectionNumber);
+                if (serie == null)
+                    return NotFound();
+                return Ok(serie);
+            }
+            catch (Exception exception)
+            {
+                return BadRequest(exception.Message);
+            }
+        }
+
+        /// <summary>
+        ///  Retrieve all series data that belong to the "Banco de Mexico" section .
+        /// <param name="bancoDeMexicoSectionNumber">The number of section for "Banco de Mexico" series section that will be retrieved. For this API purpose, there are 13 sections.</param>
+        /// </summary>
+        /// <returns>A JSON Object with the basic data of the serie collection that belongs to the "Banco de Mexico" section [Type is BanxicoSeriesBmx]</returns>
+        [HttpGet("/Banxico/GetAllSeriesBancoDeMexicoSection/{bancoDeMexicoSectionNumber}")]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(BanxicoSeriesBmx))]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        public async Task<ActionResult> GetAllSeriesBancoDeMexicoSection(int bancoDeMexicoSectionNumber)
+        {
+            if (!(bancoDeMexicoSectionNumber >= 1) || !(bancoDeMexicoSectionNumber <= 13))
+            {
+                return NotFound();
+            }
 
             try
             {

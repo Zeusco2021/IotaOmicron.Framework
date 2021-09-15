@@ -7,5 +7,6 @@ namespace IotaOmicron.Framework.Repositories.External.Banxico.Interfaces
     public interface IBanxicoRepository
     {
         public Task<BanxicoSeriesBmx> GetSerieById(string IdSerie);
+        public Task<BanxicoSeriesBmx> GetAllSeriesBancoDeMexicoSection(int BancoDeMexicoSectionNumber);
    }
 }

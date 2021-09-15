@@ -57,6 +57,7 @@ namespace IotaOmicron.Framework.GobMx.Web.API.Controllers
             {
                 return NotFound();
             }
+
             try
             {
                 var serie = await _banxicoService.GetAllSeriesBancoDeMexicoSection(bancoDeMexicoSectionNumber);

@@ -6,13 +6,14 @@ using IotaOmicron.Framework.Utilities.Common.Classes.External.Banxico;
 using IotaOmicron.Framework.Utilities.Common.Enums.External.DiarioOficialFederacion;
 using IotaOmicron.Framework.Data.Models.Sepomex;
 
-
 namespace IotaOmicron.Framework.Tests.Integration
 {
     class Program
     {
         static void Main(string[] args)
         {
+            string serieBancoDeMexico = BanxicoSeriesCatalog.BuildBancoDeMexicoSeriesSection(11);
+            string fileLocation       = $"C:\\Users\\Julio\\Downloads\\mx gob datos\\Sepomex\\CPDescarga.txt";
 
 
             // Integration test for using the Banxico API Controller and its tools for extracting data

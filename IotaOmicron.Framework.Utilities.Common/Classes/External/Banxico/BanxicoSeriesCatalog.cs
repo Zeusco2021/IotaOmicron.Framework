@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Text;
 using IotaOmicron.Framework.Utilities.Common.Enums.External.Banxico;
 
@@ -280,7 +278,7 @@ namespace IotaOmicron.Framework.Utilities.Common.Classes.External.Banxico
 																	   "040002", "040042", "068009", "068028", "068072"};
 		#endregion
 
-	private static string BuildSection(List<string> section)
+		private static string BuildSection(List<string> section)
         {
 			StringBuilder listSeriesSection = new StringBuilder();
 			foreach (string serie in section)

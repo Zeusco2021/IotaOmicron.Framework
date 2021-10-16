@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using IotaOmicron.Framework.Data.Models;
+using IotaOmicron.Framework.Data.Models.AppManagement;
 using FluentValidation;
 
 namespace IotaOmicron.Framework.Validations.Classes
@@ -13,6 +13,7 @@ namespace IotaOmicron.Framework.Validations.Classes
     {
         public ApplicationValidation()
         {
+            RuleFor(x => x.ApplicationCode).NotNull();
             RuleFor(x => x.ApplicationName).NotNull();
             RuleFor(x => x.CreatedBy).NotNull();
         }

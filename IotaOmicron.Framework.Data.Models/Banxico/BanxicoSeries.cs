@@ -1,7 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
-namespace IotaOmicron.Framework.Data.Models
+namespace IotaOmicron.Framework.Data.Models.Banxico
 {
     public class BanxicoSeriesBmx
     {

@@ -1,10 +1,4 @@
-﻿using IotaOmicron.Framework.Data.Models;
-using IotaOmicron.Framework.Services.Authentication.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using IotaOmicron.Framework.Services.Authentication.Interfaces;
 
 namespace IotaOmicron.Framework.Services.Authentication.Classes
 {

@@ -10,6 +10,7 @@ GO
 -- Description:	Creates an application to manage from IotaOmicron framework.
 -- =========================================================================
 CREATE PROCEDURE application_management.CreateApplication
+	 @pApplicationCode nvarchar(10),
 	 @pApplicationName nvarchar(25),
 	 @pErrorNumber nvarchar(MAX) OUT
 AS
@@ -24,8 +25,8 @@ BEGIN
 	BEGIN TRANSACTION;
 
 	BEGIN TRY
-		INSERT INTO application_management.Applications(ApplicationId, ApplicationName, IsCurrent, CreatedBy, CreationDate)
-												 VALUES(@ApplicationID, @pApplicationName, @IsCurrent, @CreatedBy, @CreationDate);
+		INSERT INTO application_management.Applications(ApplicationId, ApplicationCode, ApplicationName, IsCurrent, CreatedBy, CreationDate)
+												 VALUES(@ApplicationID, @pApplicationCode, @pApplicationName, @IsCurrent, @CreatedBy, @CreationDate);
 		SET @pErrorNumber ='OK';
 	END TRY
 	BEGIN CATCH

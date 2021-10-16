@@ -16,10 +16,11 @@ namespace IotaOmicron.Framework.Repositories.Application.Classes
             _dbHandler = dbHandler;
         }
 
-        public async Task<int> CreateApplication(string appName, string userName)
+        public async Task<string> CreateApplication(string appCode, string appName, string userName)
         {
-            var parameters = new { pApplicationName = appName, pCreatedBy = userName };
-            return await _dbHandler.ExecuteAsync(_connectionString, "application_management.CreateApplication", CommandType.StoredProcedure, parameters);
+            var parameters = new { pApplicationCode = appCode, pApplicationName = appName, pCreatedBy = userName, pErrorNumber = string.Empty };
+            var response = await _dbHandler.ExecuteAsync(_connectionString, "application_management.CreateApplication", CommandType.StoredProcedure, parameters);
+            return parameters.pErrorNumber;
         }
     }
 }

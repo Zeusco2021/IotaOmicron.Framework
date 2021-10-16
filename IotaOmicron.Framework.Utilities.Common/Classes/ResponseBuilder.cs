@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net;
-using System.Text;
 using System.Threading.Tasks;
 using IotaOmicron.Framework.Utilities.Common.Enums;
 using IotaOmicron.Framework.Utilities.Common.Interfaces;
-using IotaOmicron.Framework.Utilities.Common.Classes;
 using Microsoft.AspNetCore.Mvc;
 
 namespace IotaOmicron.Framework.Utilities.Common.Classes

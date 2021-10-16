@@ -1,4 +1,4 @@
-﻿using IotaOmicron.Framework.Data.Models;
+﻿using IotaOmicron.Framework.Data.Models.Banxico;
 using IotaOmicron.Framework.Services.External.Banxico.Interfaces;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;

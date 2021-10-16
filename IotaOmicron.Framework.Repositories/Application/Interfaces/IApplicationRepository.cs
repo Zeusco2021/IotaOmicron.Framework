@@ -4,6 +4,6 @@ namespace IotaOmicron.Framework.Repositories.Application.Interfaces
 {
     public interface IApplicationRepository
     {
-        Task<int> CreateApplication(string appName, string userName);
+        Task<string> CreateApplication(string appCode, string appName, string userName);
     }
 }

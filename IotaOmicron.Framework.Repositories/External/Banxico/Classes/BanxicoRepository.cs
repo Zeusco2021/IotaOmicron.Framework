@@ -1,10 +1,8 @@
 ﻿using IotaOmicron.Framework.Data.Common.Interfaces;
-using IotaOmicron.Framework.Data.Models;
-using IotaOmicron.Framework.Utilities.Common.Classes.HttpClient;
+using IotaOmicron.Framework.Data.Models.Banxico;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Net.Http;
-using Newtonsoft.Json;
 using IotaOmicron.Framework.Repositories.External.Banxico.Interfaces;
 using IotaOmicron.Framework.Utilities.Common.Interfaces;
 using System;

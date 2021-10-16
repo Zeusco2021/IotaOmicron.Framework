@@ -1,12 +1,11 @@
-﻿using IotaOmicron.Framework.Data.Models;
-using System.Collections.Generic;
+﻿using IotaOmicron.Framework.Data.Models.Banxico;
 using System.Threading.Tasks;
 
 namespace IotaOmicron.Framework.Repositories.External.Banxico.Interfaces
 {
     public interface IBanxicoRepository
     {
-        public Task<BanxicoSeriesBmx> GetSerieById(string IdSerie);
-        public Task<BanxicoSeriesBmx> GetAllSeriesBancoDeMexicoSection(int BancoDeMexicoSectionNumber);
+        Task<BanxicoSeriesBmx> GetSerieById(string IdSerie);
+        Task<BanxicoSeriesBmx> GetAllSeriesBancoDeMexicoSection(int BancoDeMexicoSectionNumber);
    }
 }

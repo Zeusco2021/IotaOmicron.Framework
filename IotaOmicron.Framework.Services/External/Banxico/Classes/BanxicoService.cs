@@ -1,7 +1,6 @@
-﻿using IotaOmicron.Framework.Data.Models;
+﻿using IotaOmicron.Framework.Data.Models.Banxico;
 using IotaOmicron.Framework.Repositories.External.Banxico.Interfaces;
 using IotaOmicron.Framework.Services.External.Banxico.Interfaces;
-using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace IotaOmicron.Framework.Services.External.Banxico.Classes

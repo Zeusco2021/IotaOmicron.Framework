@@ -2,8 +2,12 @@ using IotaOmicron.Framework.Data.Common.Config;
 using IotaOmicron.Framework.Data.Common.Interfaces;
 using IotaOmicron.Framework.Repositories.External.Banxico.Classes;
 using IotaOmicron.Framework.Repositories.External.Banxico.Interfaces;
+using IotaOmicron.Framework.Repositories.External.DiarioOficialFederacion.Classes;
+using IotaOmicron.Framework.Repositories.External.DiarioOficialFederacion.Interfaces;
 using IotaOmicron.Framework.Services.External.Banxico.Classes;
 using IotaOmicron.Framework.Services.External.Banxico.Interfaces;
+using IotaOmicron.Framework.Services.External.DiarioOficialFederacion.Classes;
+using IotaOmicron.Framework.Services.External.DiarioOficialFederacion.Interfaces;
 using IotaOmicron.Framework.Utilities.Common.Classes.HttpClient;
 using IotaOmicron.Framework.Utilities.Common.Interfaces;
 using IotaOmicron.Framework.Utilities.Middleware;
@@ -35,8 +39,10 @@ namespace IotaOmicron.Framework.GobMx.Web.API
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "IotaOmicron.Framework.GobMx.Web.API", Version = "v1", Description = "REST API abstraction of Mexican government public API's" });
             });
 
-            services.AddTransient<IBanxicoService, BanxicoService>();
             services.AddTransient<IBanxicoRepository, BanxicoRepository>();
+            services.AddTransient<IDOFRepository, DOFRepository>();
+            services.AddTransient<IBanxicoService, BanxicoService>();
+            services.AddTransient<IDOFService, DOFService>();
             services.AddTransient<IHttpCustomClient, HttpCustomClient>();
 
             var banxicoToken        = new BanxicoToken();
@@ -46,6 +52,10 @@ namespace IotaOmicron.Framework.GobMx.Web.API
             IBanxicoConfig banxicoConfig = new BanxicoConfig(banxicoToken);
             banxicoConfig.BaseUri        = Configuration["Banxico:BaseUriSeries"];
             services.AddSingleton(banxicoConfig);
+
+            IDiarioOficialFederacionConfig diarioOficialFederacionConfig = new DiarioOficialFederacionConfig();
+            diarioOficialFederacionConfig.BaseUri                        = Configuration["DiarioOficialFederacion:BaseUri"];
+            services.AddSingleton(diarioOficialFederacionConfig);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

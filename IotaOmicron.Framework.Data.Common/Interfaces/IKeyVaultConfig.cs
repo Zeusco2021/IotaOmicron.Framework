@@ -2,7 +2,7 @@
 {
     public interface IKeyVaultConfig
     {
-        public string LocalConnectionString { get; set; }
-        public string RemoteConnectionString { get; set; }
+        string LocalConnectionString { get; set; }
+        string RemoteConnectionString { get; set; }
     }
 }

@@ -10,6 +10,8 @@ GO
 
 CREATE TABLE [application_management].[Applications](
 	[ApplicationId] [uniqueidentifier] ROWGUIDCOL  NOT NULL,
+	[ApplicationNumber] [int] IDENTITY(1, 1) NOT NULL,
+	[ApplicationCode] [nvarchar](10) NOT NULL, 
 	[ApplicationName] [nvarchar](25) NOT NULL,
 	[IsCurrent] [bit] NOT NULL,
 	[CreatedBy] [nvarchar](100) NOT NULL,

@@ -6,6 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\IotaOmicron.Framework.Data.Models\IotaOmicron.Framework.Data.Models.csproj" />
     <ProjectReference Include="..\IotaOmicron.Framework.Utilities.Common\IotaOmicron.Framework.Utilities.Common.csproj" />
   </ItemGroup>
 

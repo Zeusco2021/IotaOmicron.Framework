@@ -29,11 +29,11 @@ namespace IotaOmicron.Framework.AppMgmt.Web.API.Controllers
         [ProducesResponseType(typeof(int), (int)HttpStatusCode.OK)]
         [ProducesResponseType(typeof(int), (int)HttpStatusCode.BadRequest)]
         [ProducesResponseType(typeof(int), (int)HttpStatusCode.InternalServerError)]
-        public async Task<IActionResult> CreateApplication(string appName, string userName)
+        public async Task<IActionResult> CreateApplication(string appCode, string appName, string userName)
         {
             try
             {
-                var createdApplication = await _applicationService.CreateApplication(appName, userName);
+                var createdApplication = await _applicationService.CreateApplication(appCode, appName, userName);
                 return Ok();
             }
             catch (Exception e)

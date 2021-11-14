@@ -17,5 +17,9 @@ namespace IotaOmicron.Framework.Services.Application.Classes
         {
             return await _applicationRepository.CreateApplication(appCode, appName, userName);
         }
+        public async Task<string> UpdateApplication(int appNumber, string appCode, string appName, string userName)
+        {
+            return await _applicationRepository.UpdateApplication(appNumber, appCode, appName, userName);
+        }
     }
 }

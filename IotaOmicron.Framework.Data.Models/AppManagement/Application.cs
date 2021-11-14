@@ -7,7 +7,6 @@ namespace IotaOmicron.Framework.Data.Models.AppManagement
     {
         [Required(ErrorMessage = "Application ID is required")]
         public Guid ApplicationId { get; set; }
-
         public int ApplicationNumber { get; set; }
         [Required(ErrorMessage = "Application Code is required")]
         public string ApplicationCode { get; set; }

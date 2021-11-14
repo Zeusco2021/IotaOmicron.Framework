@@ -12,7 +12,7 @@ GO
 -- ===========================================================================
 -- Author:		Julio Cesar Plascencia Hernandez
 -- Create date: Friday, Novemmber 12th. 2021
--- Description:	Updates application data to manage from IotaOmicron framework.
+-- Description:	Updates permission data to manage from IotaOmicron framework.
 -- ===========================================================================
 CREATE PROCEDURE [application_management].[UpdatePermission]
 	 @pPermissionNumber INT,
@@ -24,11 +24,8 @@ AS
 BEGIN
 	SET NOCOUNT ON;
 	
-	DECLARE @IsCurrent BIT                  = 1;
-	DECLARE @IsDataChanged BIT              = 0;
-	DECLARE @CreationDate DATETIME          = GETDATE();
-	DECLARE @ModificationDate DATETIME      = GETDATE();
-	DECLARE @PermissionID UNIQUEIDENTIFIER  = NEWID();
+	DECLARE @IsDataChanged BIT         = 0;
+	DECLARE @ModificationDate DATETIME = GETDATE();
 	DECLARE @CurrentPermissionCode NVARCHAR(10);
 	DECLARE @CurrentPermissionName NVARCHAR(25);
 
@@ -58,8 +55,8 @@ BEGIN
 			 WHERE PermissionNumber  = @pPermissionNumber;
 
 			-- 2: Inserting the new current record
-			INSERT INTO application_management.[Permissions](PermissionId, PermissionCode, PermissionName, IsCurrent, CreatedBy, CreationDate)
-													 VALUES(@PermissionID, @pPermissionCode, @pPermissionName, @IsCurrent, @pPermissionUserName, @CreationDate);
+			INSERT INTO application_management.[Permissions](PermissionCode, PermissionName, CreatedBy)
+													 VALUES(@pPermissionCode, @pPermissionName, @pPermissionUserName);
 
 			SET @pErrorNumber ='OK - Data for new Permission Number ' + CAST(@@IDENTITY AS NVARCHAR(7))  + ' updated successfully';
 		END

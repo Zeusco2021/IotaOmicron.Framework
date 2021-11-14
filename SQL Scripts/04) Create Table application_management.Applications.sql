@@ -1,7 +1,7 @@
 USE [AppManagement]
 GO
 
-/****** Object:  Table [application_management].[Applications]    Script Date: 20/07/2021 00:01:56 ******/
+/****** Object:  Table [application_management].[Applications]    Script Date: 13/11/2021 08:54:09 p. m. ******/
 SET ANSI_NULLS ON
 GO
 
@@ -10,8 +10,8 @@ GO
 
 CREATE TABLE [application_management].[Applications](
 	[ApplicationId] [uniqueidentifier] ROWGUIDCOL  NOT NULL,
-	[ApplicationNumber] [int] IDENTITY(1, 1) NOT NULL,
-	[ApplicationCode] [nvarchar](10) NOT NULL, 
+	[ApplicationNumber] [int] IDENTITY(1,1) NOT NULL,
+	[ApplicationCode] [nvarchar](10) NOT NULL,
 	[ApplicationName] [nvarchar](25) NOT NULL,
 	[IsCurrent] [bit] NOT NULL,
 	[CreatedBy] [nvarchar](100) NOT NULL,
@@ -20,7 +20,7 @@ CREATE TABLE [application_management].[Applications](
 	[ModificationDate] [datetime] NULL,
  CONSTRAINT [PK_Applications] PRIMARY KEY CLUSTERED 
 (
-	[ApplicationId] ASC
+	[ApplicationNumber] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO

@@ -20,15 +20,11 @@ AS
 BEGIN
 	SET NOCOUNT ON;
 	
-	DECLARE @ApplicationID UNIQUEIDENTIFIER = NEWID();
-	DECLARE @IsCurrent BIT                  = 1;
-	DECLARE @CreationDate DATETIME          = GETDATE();
-	
 	BEGIN TRANSACTION;
 
 	BEGIN TRY
-		INSERT INTO application_management.Applications(ApplicationId, ApplicationCode, ApplicationName, IsCurrent, CreatedBy, CreationDate)
-												 VALUES(@ApplicationID, @pApplicationCode, @pApplicationName, @IsCurrent, @pApplicationUserName, @CreationDate);
+		INSERT INTO application_management.Applications(ApplicationCode, ApplicationName, CreatedBy)
+												 VALUES(@pApplicationCode, @pApplicationName, @pApplicationUserName);
 		SET @pErrorNumber ='OK - Created application name ' + @pApplicationName + ' with ID ' + CAST(@@IDENTITY AS NVARCHAR(7))  + ' successfully';
 	END TRY
 	BEGIN CATCH

@@ -67,26 +67,26 @@ namespace IotaOmicron.Framework.Tests.Integration
             Console.ReadLine();
 
             // Using the LINQ Distinct method in order to get diferent "Tipos de Asentamientos" (types of settlements)
-            var queryTiposAsentamiento = codigosPostales.GroupBy(x => x.ClaveTipoAsentamiento).Select(x => x.First()).ToList();
+            /*var queryTiposAsentamiento = codigosPostales.GroupBy(x => x.ClaveTipoAsentamiento).Select(x => x.First()).ToList();
 
             foreach (var item in queryTiposAsentamiento)
             {
                 Console.WriteLine(String.Format("{0} - {1}", item.ClaveTipoAsentamiento, item.TipoAsentamiento));
             }
-            Console.ReadLine();
+            Console.ReadLine();*/
 
             // Using the LINQ Distinct method in order to get diferent "Asentamientos" (settlements)
             var queryAsentamiento = codigosPostales.GroupBy(x => x.ClaveTipoUnicoAsentamiento).Select(x => x.First()).ToList();
 
             foreach (var item in queryAsentamiento)
             {
-                Console.WriteLine(String.Format("{0} - {1} - {2}", item.ClaveTipoAsentamiento, item.ClaveTipoUnicoAsentamiento, item.NombreAsentamiento));
+                Console.WriteLine(String.Format("{0} - {1} - {2}", item.ClaveTipoUnicoAsentamiento, item.NombreAsentamiento, item.TipoZona));
             }
             Console.ReadLine();
 
 
             // Using the LINQ Distinct method in order to get diferent "Entidades Federativas" (states)
-            var queryEntidadesFederativas = codigosPostales.GroupBy(x => x.ClaveEntidadFederativa).Select(x => x.First()).ToList();
+            /*var queryEntidadesFederativas = codigosPostales.GroupBy(x => x.ClaveEntidadFederativa).Select(x => x.First()).ToList();
             
             foreach (var item in queryEntidadesFederativas)
             {
@@ -103,7 +103,7 @@ namespace IotaOmicron.Framework.Tests.Integration
                     Console.WriteLine(String.Format("{0} - {1} - {2}", item.ClaveEntidadFederativa, item.ClaveMunicipio, item.Municipio));
                 }
             }
-            Console.ReadLine();
+            Console.ReadLine();*/
         }
     }
 }

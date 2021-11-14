@@ -22,11 +22,8 @@ AS
 BEGIN
 	SET NOCOUNT ON;
 	
-	DECLARE @IsCurrent BIT                  = 1;
-	DECLARE @IsDataChanged BIT              = 0;
-	DECLARE @CreationDate DATETIME          = GETDATE();
-	DECLARE @ModificationDate DATETIME      = GETDATE();
-	DECLARE @ApplicationID UNIQUEIDENTIFIER = NEWID();
+	DECLARE @IsDataChanged BIT         = 0;
+	DECLARE @ModificationDate DATETIME = GETDATE();
 	DECLARE @CurrentApplicationCode NVARCHAR(10);
 	DECLARE @CurrentApplicationName NVARCHAR(25);
 
@@ -56,8 +53,8 @@ BEGIN
 			 WHERE ApplicationNumber = @pApplicationNumber;
 
 			-- 2: Inserting the new current record
-			INSERT INTO application_management.Applications(ApplicationId, ApplicationCode, ApplicationName, IsCurrent, CreatedBy, CreationDate)
-													 VALUES(@ApplicationID, @pApplicationCode, @pApplicationName, @IsCurrent, @pApplicationUserName, @CreationDate);
+			INSERT INTO application_management.Applications(ApplicationCode, ApplicationName, CreatedBy)
+													 VALUES(@pApplicationCode, @pApplicationName,  @pApplicationUserName);
 
 			SET @pErrorNumber ='OK - Data for new Application Number ' + CAST(@@IDENTITY AS NVARCHAR(7))  + ' updated successfully';
 		END

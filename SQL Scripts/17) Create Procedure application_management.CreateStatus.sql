@@ -1,7 +1,7 @@
 USE [AppManagement]
 GO
 
-/****** Object:  StoredProcedure [application_management].[CreatePermission]    Script Date: 12/11/2021 12:53:16 p. m. ******/
+/****** Object:  StoredProcedure [application_management].[CreateStatus]    Script Date: 15/11/2021 21:26:56 p. m. ******/
 SET ANSI_NULLS ON
 GO
 
@@ -12,12 +12,12 @@ GO
 -- =========================================================================
 -- Author:		Julio Cesar Plascencia Hernandez
 -- Create date: Friday, November 12th. 2021
--- Description:	Creates a Permission to manage from IotaOmicron framework.
+-- Description:	Creates a Status to manage from IotaOmicron framework.
 -- =========================================================================
-CREATE PROCEDURE [application_management].[CreatePermission]
-	 @pPermissionCode NVARCHAR(10),
-	 @pPermissionName NVARCHAR(25),
-	 @pPermissionUserName NVARCHAR(100),
+CREATE PROCEDURE [application_management].[CreateStatus]
+	 @pStatusCode NVARCHAR(10),
+	 @pStatusName NVARCHAR(25),
+	 @pStatusUserName NVARCHAR(100),
 	 @pErrorNumber NVARCHAR(MAX) OUT
 AS
 BEGIN
@@ -26,9 +26,9 @@ BEGIN
 	BEGIN TRANSACTION;
 
 	BEGIN TRY
-		INSERT INTO application_management.[Permissions](PermissionCode, PermissionName, CreatedBy)
-									        VALUES(@pPermissionCode, @pPermissionName, @pPermissionUserName);
-		SET @pErrorNumber ='OK - Created application name ' + @pPermissionName + ' with ID ' + CAST(@@IDENTITY AS NVARCHAR(7))  + ' successfully';
+		INSERT INTO application_management.[Status](StatusCode, StatusName, CreatedBy)
+									        VALUES(@pStatusCode, @pStatusName, @pStatusUserName);
+		SET @pErrorNumber ='OK - Created application name ' + @pStatusName + ' with ID ' + CAST(@@IDENTITY AS NVARCHAR(7))  + ' successfully';
 	END TRY
 	BEGIN CATCH
 		SET @pErrorNumber = 'Error Number: ' + CAST(ERROR_NUMBER() AS NVARCHAR(10)) + '; ' + NCHAR(10) +

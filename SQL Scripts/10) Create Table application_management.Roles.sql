@@ -1,7 +1,7 @@
 USE [AppManagement]
 GO
 
-/****** Object:  Table [application_management].[Roles]    Script Date: 12/11/2021 01:15:17 p. m. ******/
+/****** Object:  Table [application_management].[Roles]    Script Date: 13/11/2021 08:57:46 p. m. ******/
 SET ANSI_NULLS ON
 GO
 
@@ -20,7 +20,7 @@ CREATE TABLE [application_management].[Roles](
 	[ModificationDate] [datetime] NULL,
  CONSTRAINT [PK_Roles] PRIMARY KEY CLUSTERED 
 (
-	[RoleId] ASC
+	[RoleNumber] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO

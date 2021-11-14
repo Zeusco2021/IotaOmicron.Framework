@@ -23,15 +23,11 @@ AS
 BEGIN
 	SET NOCOUNT ON;
 	
-	DECLARE @RoleID UNIQUEIDENTIFIER = NEWID();
-	DECLARE @IsCurrent BIT           = 1;
-	DECLARE @CreationDate DATETIME   = GETDATE();
-	
 	BEGIN TRANSACTION;
 
 	BEGIN TRY
-		INSERT INTO application_management.[Roles](RoleId, RoleCode, RoleName, IsCurrent, CreatedBy, CreationDate)
-									        VALUES(@RoleID, @pRoleCode, @pRoleName, @IsCurrent, @pRoleUserName, @CreationDate);
+		INSERT INTO application_management.[Roles](RoleCode, RoleName, CreatedBy)
+									        VALUES(@pRoleCode, @pRoleName, @pRoleUserName);
 		SET @pErrorNumber ='OK - Created application name ' + @pRoleName + ' with ID ' + CAST(@@IDENTITY AS NVARCHAR(7))  + ' successfully';
 	END TRY
 	BEGIN CATCH
